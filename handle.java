@@ -8,8 +8,10 @@ protected void onCreate(Bundle savedInstanceState) {
 protected void onNewIntent(Intent intent) {
     String action = intent.getAction();
     final String encodedURL = intent.getDataString();
+
     if (Intent.ACTION_VIEW.equals(action) && encodedURL != null) {
         Log.d("App Link", encodedURL);
+
         new Thread(new Runnable() {
             public void run() {
                 try {
