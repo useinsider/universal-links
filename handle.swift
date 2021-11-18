@@ -1,4 +1,3 @@
-
 func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
     if userActivity.activityType == NSUserActivityTypeBrowsingWeb {
         guard let encodedURL = userActivity.webpageURL else {
